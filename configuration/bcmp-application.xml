@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+ <configuration>
+  <property>
+    <name>mysql_jdbc_connect</name>
+    <value>localhost</value>
+    <description>mysql connect</description>
+  </property>
+  <property>
+    <name>mysql_jdbc_port</name>
+    <value>3306</value>
+    <description>mysql connect port</description>
+  </property>
+  <property>
+    <name>database</name>
+    <value>bcmp</value>
+    <description>mysql connect port</description>
+  </property>
+  <property>
+    <name>mysql_jdbc_username</name>
+    <value>root</value>
+    <description>mysql user</description>
+  </property>
+  <property>
+    <name>mysql_jdbc_password</name>
+    <value>root</value>
+    <description>mysql connect password</description>
+  </property>
+  <property>
+    <name>mysql_jdbc_driver</name>
+    <value>com.mysql.jdbc.Driver</value>
+    <description>mysql connect driver</description>
+  </property>
+  <property>
+    <name>mysql_max_active</name>
+    <value>100</value>
+    <description>mysql max active</description>
+  </property>
+  <property>
+    <name>mysql_initial_size</name>
+    <value>20</value>
+    <description>mysql initial size</description>
+  </property>
+  <property>
+    <name>mysql_min_idle</name>
+    <value>20</value>
+    <description>mysql min idle</description>
+  </property>
+  <property>
+    <name>bcmp_zookeeper_host</name>
+    <value>127.0.0.1:2181</value>
+    <description>mysql max active</description>
+  </property>
+ </configuration>

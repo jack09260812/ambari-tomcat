@@ -1,0 +1,21 @@
+spring.datasource.url=jdbc:mysql://{{mysql_jdbc_connect}}:{{mysql_jdbc_port}}/{{database}}?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+spring.datasource.username={{mysql_jdbc_username}}
+spring.datasource.password={{mysql_jdbc_password}}
+spring.datasource.driver-class-name={{mysql_jdbc_driver}}
+spring.datasource.maxActive= {{mysql_max_active}}
+spring.datasource.initialSize= {{mysql_initial_size}}
+spring.datasource.minIdle= {{mysql_min_idle}}
+spring.datasource.timeBetweenEvictionRunsMillis= 60000
+spring.datasource.minEvictableIdleTimeMillis= 300000
+spring.datasource.validationQuery= select 'x'
+spring.datasource.testWhileIdle= true
+spring.datasource.testOnBorrow= false
+spring.datasource.testOnReturn= false
+spring.datasource.filters= stat
+
+#hive
+customized.datasource.names=hive
+customized.datasource.hive.url=jdbc:mysql://{{hive_mysql_datasource}}:{{hive_mysql_port}}/{{hive_datasource_database}}?useUnicode=true&characterEncoding=UTF-8
+customized.datasource.hive.username={{hive_mysql_username}}
+customized.datasource.hive.password={{hive_mysql_password}}
+customized.datasource.hive.driver-class-name={{mysql_jdbc_driver}}

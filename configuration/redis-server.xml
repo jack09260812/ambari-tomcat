@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+ <configuration>
+  <property>
+    <name>redis_host</name>
+    <value>localhost</value>
+    <description>redis hosts</description>
+  </property>
+   <property>
+    <name>redis_port</name>
+    <value>6379</value>
+    <description>redis port</description>
+  </property>
+  <property>
+    <name>redis_timeout</name>
+    <value>0</value>
+    <description>timeout</description>
+  </property>
+ </configuration>

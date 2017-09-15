@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <!--ambari部署时显示的内容-->
+            <name>BCMP</name>
+            <displayName>BCMP</displayName>
+            <comment>数据可视化开发</comment>
+            <version>1.1.0</version>
+            <!--组件定义,组件中只有master和slave-->
+            <components>
+                <component>
+                    <name>BCMP</name>
+                    <displayName>BCMP PROJECT</displayName>
+                    <category>MASTER</category>
+                    <cardinality>1</cardinality>
+                    <commandScript>
+                        <script>scripts/bcmp-project.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>600</timeout>
+                    </commandScript>
+                </component>
+            </components>
+            <!--操作系统说明，以下是适配任何操作系统-->
+            <osSpecifics>
+                <osSpecific>
+                    <osFamily>any</osFamily>
+                    <!--安装包说明-->
+                    <packages>
+                        <package>
+                            <name>apache-tomcat*</name>
+                        </package>
+                        <!--bcmp 依赖redis-->
+                        <package>
+                            <name>redis-2.*</name>
+                        </package>
+                    </packages>
+                </osSpecific>
+            </osSpecifics>
+
+            <commandScript>
+              <script>scripts/service_check.py</script>
+              <scriptType>PYTHON</scriptType>
+              <timeout>300</timeout>
+            </commandScript>
+
+            <configuration-dependencies>
+                  <config-type>project-env</config-type>
+                  <config-type>project-server</config-type>
+            </configuration-dependencies>
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
+        </service>
+    </services>
+</metainfo>

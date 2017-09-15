@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+ <configuration>
+  <property>
+    <name>hive_mysql_datasource</name>
+    <value>localhost</value>
+  </property>
+   <property>
+    <name>hive_mysql_port</name>
+    <value>3306</value>
+  </property>
+  <property>
+    <name>hive_datasource_database</name>
+    <value>hive</value>
+  </property>
+   <property>
+    <name>hive_mysql_username</name>
+    <value>hive</value>
+  </property>
+  <property>
+    <name>hive_mysql_password</name>
+    <value>root</value>
+  </property>
+  <property>
+    <name>hive_server2_connect</name>
+    <value>jdbc:hive2://localhost:10000</value>
+  </property>
+  <property>
+    <name>hive_server2_user</name>
+    <value>hive</value>
+  </property>
+  <property>
+    <name>hive_server2_password</name>
+    <value>root</value>
+  </property>
+ </configuration>

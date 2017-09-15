@@ -1,0 +1,46 @@
+spring.profiles.active=db,freemarker
+spring.mybatis.mapperPackage = com.astral.web.mapper
+
+#dubbo\u914D\u7F6E
+#spring.dubbo.application.name=credit.business.provider
+#spring.dubbo.registry.address=zookeeper://192.168.98.106:2181
+#spring.dubbo.protocol.name=dubbo
+#spring.dubbo.protocol.port=20880
+#spring.dubbo.scan = com.xingjie.business.api.impl
+
+server.port = 8080
+
+spring.application.name=bcmp
+server.compression.enabled: true
+server.compression.min-response-size: 1
+server.connection-timeout=5000
+#默认支持文件上传
+spring.http.multipart.enabled=true
+#支持文件写入磁盘
+spring.http.multipart.file-size-threshold=0
+#最大支持文件大小
+spring.http.multipart.max-file-size=5120Mb
+astral.script.exec.path=/opt/data/sync/xingjie/script
+astral.script.exec.log.path=/opt/data/sync/xingjie/log
+astral.script.exec.result.path=/opt/data/sync/xingjie/result
+astral.script.utils.path=/opt/data/sync/xingjie/utils
+astral.file.path=/opt/data/sync/xingjie/file
+#停止任务脚本名
+astral.script.killShell.name=killShell.sh
+#上传文件类型
+file.system.upload.type=csv,txt,sh,jar,war,zip,gz,log,rar,tar,sql,hql,cql
+#最大支持文件大小,以mb为单位
+spring.http.multipart.max-file-size=5120Mb
+#定时清理日志和结果文件的任务执行周期
+#0 0 2 * * ?  每天凌晨2点执行
+job.data.clean.cron=0 0 2 * * ?
+#日志和结果文件保留时长（单位:天）
+job.data.keep.time=7
+
+#调用hive命令的方式  shell|jdbc 默认为shell
+hive.execute.type=jdbc
+hive.driverClass=org.apache.hive.jdbc.HiveDriver
+#hive.url=jdbc:hive2://guest05:2181,guest07:2181,guest08:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2
+hive.url={{hive_server2_connect}}
+hive.user={{hive_server2_user}}
+hive.password={{hive_server2_password}}

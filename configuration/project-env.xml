@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+ 
+ <configuration>
+  <property>
+    <name>product_user</name>
+    <value>jupiter</value>
+    <property-type>USER</property-type>
+  </property>
+   <property>
+    <name>product_group</name>
+    <value>jupiter</value>
+    <property-type>GROUP</property-type>
+  </property>
+ </configuration>
